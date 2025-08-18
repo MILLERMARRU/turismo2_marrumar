@@ -84,7 +84,7 @@ export default function Navbar() {
       {/* Menú móvil desplegable */}
       {isOpen && (
         <div className="md:hidden px-6 pb-4 text-white">
-          {["Home", "Destinos", "Nosotros", "Mapas", "Contacto"].map(
+          {["Home", "Destinos", "Nosotros", "Mapas", "Contact"].map(
             (text, i) => {
               const id = text.toLowerCase();
               const action =

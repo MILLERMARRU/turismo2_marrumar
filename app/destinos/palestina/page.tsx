@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Testimonials from "@/components/testimonials/Testimonials";
+import { getTestimonialsByDestination } from "@/components/testimonials/testimonialsData";
 
 export default function PalestinaPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -130,6 +132,13 @@ export default function PalestinaPage() {
           ))}
         </div>
       </section>
+
+      {/* TESTIMONIOS */}
+      <Testimonials 
+        testimonials={getTestimonialsByDestination('palestina')}
+        title="Experiencias"
+        subtitle="Lo que dicen nuestros visitantes"
+      />
 
       {/* MAPA EMBEBIDO */}
       <section className="max-w-5xl mx-auto px-6 pt-16">
